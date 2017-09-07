@@ -576,10 +576,8 @@ jobs:
     - get: gpdb_src
     - get: gpaddon_src
     - get: pxf_src
-    - get: sles-gpdb-dev-11-beta
   - task: compile_gpdb
-    file: gpdb_src/concourse/tasks/compile_gpdb.yml
-    image: sles-gpdb-dev-11-beta
+    file: gpdb_src/concourse/tasks/compile_gpdb_sles11.yml
     params:
       IVYREPO_HOST: {{ivyrepo_host}}
       IVYREPO_REALM: {{ivyrepo_realm}}
